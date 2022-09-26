@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><%- title %></title>
+    <!-- fontawesome icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/style/all.css" />
+  </head>
+
+  <body>
+    <section>
+      <!-- navbar -->
+      <header class="header border-bottom">
+        <div
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <!-- logo -->
+          <h1>
+            <a class="navbar-brand" href="./index.html">NFT logo</a>
+          </h1>
+          <nav class="navbar navbar-expand-lg navbar-light py-0">
+            <!-- nav & dropdown menu -->
+            <!-- mobile 點擊search icon 後 search frame show -->
+            <div class="d-flex justify-content-between align-items-center">
+              <div
+                class="searchFrame d-none d-flex justify-content-between align-items-center"
+              >
+                <i class="fa-solid fa-angle-left"></i>
+                <form class="d-flex">
+                  <input
+                    class="searchForm"
+                    type="search"
+                    placeholder="搜尋作品名稱、藝術家名稱"
+                    aria-label="Search"
+                  />
+                </form>
+              </div>
+              <!-- mobile search icon -->
+              <button class="btn searchBtn d-lg-none" type="submit">
+                <a href="#">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+              </button>
+            </div>
+
+            <!-- mobile menu btn -->
+            <button
+              class="navbar-toggler d-lg-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+              <i class="fa-solid fa-xmark fa-xl close-icon"></i>
+            </button>
+
+            <!-- mobile & lg dropdown -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav d-flex align-items-lg-center bg-light">
+                <!-- search+icon -->
+                <li class="nav-item d-flex align-lg-center d-none d-md-block">
+                  <form class="d-flex">
+                    <input
+                      class="form-control"
+                      type="search"
+                      placeholder="搜尋作品名稱、藝術家名稱"
+                      aria-label="Search"
+                    />
+                    <button class="btn searchBtn" type="submit">
+                      <a href="#">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </a>
+                    </button>
+                  </form>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="./explore.html"
+                    >探索</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">市值</a>
+                </li>
+                <!-- 桌機 錢包icon -->
+                <li class="nav-item d-none d-sm-none d-lg-block">
+                  <a class="nav-link" href="#">
+                    <i class="fa-solid fa-wallet fs-3"></i>
+                  </a>
+                </li>
+                <!-- 手機按鈕錢包 -->
+                <li class="nav-item d-lg-none">
+                  <a class="nav-link" href="#">
+                    <button class="btn btn-primary btn-primary-link">
+                      連結錢包
+                    </button>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+    </section>
+
+    <%- contents %>
+
+    <footer class="footer bg-light text-center py-5">
+      © ART NFT. All Rights Reserved
+    </footer>
+
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+      integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- 瀑布流 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+      integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+      crossorigin="anonymous"
+      async
+    ></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+</html>

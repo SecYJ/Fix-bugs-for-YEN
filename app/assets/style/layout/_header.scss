@@ -1,0 +1,108 @@
+.header {
+  h1 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    .navbar-brand {
+      padding: 0;
+      margin: 0;
+      background-image: url("../images/logo.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 85px;
+      height: 18px;
+      text-indent: 101%;
+      overflow: hidden;
+      white-space: nowrap;
+      display: block;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    h1 {
+      padding-top: 32px;
+      padding-bottom: 32px;
+      .navbar-brand {
+        width: 190px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+// 手機版收尋欄位
+.searchForm {
+  background-color: #f0f0f0;
+  width: 279px;
+  top: 8px;
+  right: 65px;
+  border: none;
+}
+.fa-angle-left {
+  height: 12px;
+  margin-right: 16px;
+}
+
+.navbar {
+  height: 50px;
+  @include media-breakpoint-up(lg) {
+    height: 100%;
+  }
+
+  li {
+    border-left: 1px solid black;
+  }
+  // 桌機搜尋欄位
+  .form-control {
+    border: none;
+    background-color: #f0f0f0;
+    width: 288px;
+    padding: 40px 0px 40px 46px;
+  }
+  .searchBtn {
+    padding: 0;
+    @include media-breakpoint-up(lg) {
+      padding-left: 24px;
+      padding-right: 47px;
+    }
+    padding: 0 24px 0 65px;
+    width: 18px;
+  }
+  .navbar-toggler {
+    border: none;
+    position: relative;
+
+    .close-icon {
+      display: none;
+    }
+  }
+}
+
+// 下拉式選單設定
+.navbar-nav {
+  // display: none;
+  position: absolute;
+  @include media-breakpoint-up(lg) {
+    position: inherit;
+  }
+  left: 0;
+  top: 100%;
+  //讓選單向上推出 header 的空間，避免選單展開時會遮擋住 header
+  width: 100%;
+  // max-height: 0px;
+  // overflow: hidden;
+  text-align: center;
+
+  .btn-primary-link {
+    width: 100%;
+    padding: 12px 24px;
+  }
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  font-weight: $font-weight-bold;
+  color: black;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  @include media-breakpoint-up(md) {
+    padding: 40px 32px;
+    font-style: 24px;
+  }
+}

@@ -1,0 +1,22 @@
+@import "https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Squada+One&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Paytone+One&display=swap";
+@import "https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css";
+
+@import "../../../node_modules/bootstrap/scss/functions";
+//自己的＿variables.scss要先放在bs的前面 因為都是default這樣就可以蓋掉後面的bs default
+@import "./helpers/variables";
+// bs ＿variables.scss default要放在自己的＿variables.scss後面
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+@import "./helpers/reset";
+@import "./helpers/base";
+@import "./helpers/component";
+@import "./helpers/utili";
+@import "./helpers/mixin";
+
+@import "./layout/header";
+@import "./layout/footer";
+
+@import "./pages/index";
+@import "./pages/explore";

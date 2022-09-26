@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: $font-family-sans-serif;
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+}
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+ul {
+  margin-bottom: 0;
+}

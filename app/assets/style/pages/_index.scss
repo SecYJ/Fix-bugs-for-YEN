@@ -1,0 +1,241 @@
+// banner
+.banner {
+	.title {
+		width: 100px;
+		height: 500px;
+		background-color: black;
+		writing-mode: vertical-rl;
+		font-family: "Squada One";
+	}
+	.banner-img {
+		@include media-breakpoint-up(md) {
+			width: 765px;
+			height: 500px;
+		}
+	}
+	.bannerCardImg {
+		height: 372px;
+		width: 100%;
+		@include media-breakpoint-up(lg) {
+			height: 340px;
+		}
+	}
+}
+.banner {
+	.bannerCardBody {
+		height: 273px;
+		padding: 32px 12px 24px;
+		@include media-breakpoint-up(lg) {
+			height: 341px;
+			padding: 48px 24px 24px 24px;
+		}
+	}
+	.card-text {
+		@include media-breakpoint-up(lg) {
+			height: 96px;
+			margin-bottom: 40px;
+		}
+	}
+}
+
+// ranking 排名 // 照片
+.ranking {
+	.ranking-img {
+		// 小圖
+		width: 87px;
+		height: 90px;
+		@include media-breakpoint-up(md) {
+			height: 374px;
+			width: 414px;
+		}
+	}
+}
+// 小圖
+.ranking {
+	.img-fluid {
+		width: 100%;
+		height: 90px;
+	}
+}
+
+//號碼＆hover按鈕位置
+.ranking {
+	.number {
+		z-index: 2;
+		width: 38px;
+		background-color: white;
+
+		@include media-breakpoint-up(md) {
+			width: 64px;
+			height: 64px;
+			top: 0px;
+			left: 0px;
+		}
+	}
+}
+
+// moreBtn
+.ranking {
+	.moreBtn {
+		bottom: -1px;
+		right: 0px;
+		display: none;
+	}
+}
+//hover效果
+.ranking-img {
+	&:hover {
+		.img-hover {
+			display: block;
+		}
+		.moreBtn {
+			display: block;
+			z-index: 1;
+		}
+	}
+}
+
+// artist
+.artistSwiper {
+	padding-top: 50px;
+	width: 100%;
+	height: 100%;
+	// swiper-wrapper {
+	// 	transform: translate3d(-341px, 0px, 0px);
+	// }
+}
+// 不確定需不需要
+.swiper-slide {
+	/* Center slide text vertically */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&-active {
+		width: 100% !important;
+
+		@include media-breakpoint-up(lg) {
+			width: 50% !important;
+		}
+	}
+
+	&-prev,
+	&-next {
+		@include media-breakpoint-up(lg) {
+			width: 25% !important;
+		}
+	}
+}
+.artistSwiper {
+	.swiper-slide img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.swiper-slide {
+		.card {
+			.card-title {
+				padding-left: 24px;
+				padding-top: 24px;
+				font-size: 32px;
+				@include media-breakpoint-up(md) {
+					font-size: 80px;
+				}
+			}
+			.moreBtn {
+				position: absolute;
+				bottom: 25%;
+				right: 5%;
+				width: 132px;
+				@include media-breakpoint-up(md) {
+					bottom: 5%;
+					right: 5%;
+				}
+			}
+		}
+	}
+}
+
+.artistSwiper {
+	.swiper-slide-active {
+		// width: 100% !important;
+
+		// .card {
+		// 	@include media-breakpoint-up(lg) {
+		// 		width: 100% !important;
+		// 		margin-left: -23%;
+		// 	}
+		// }
+		// p {
+		// 	opacity: 0.8;
+		// 	@include media-breakpoint-up(lg) {
+		// 		position: absolute;
+		// 		bottom: 16px;
+		// 		left: 24px;
+		// 		max-width: 307px;
+		// 	}
+		// }
+	}
+}
+
+.artist {
+	.swiper-pagination {
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+	}
+	.swiper-pagination-bullet {
+		opacity: initial;
+		border-radius: 0;
+		&-active {
+			background-color: $primary;
+			width: 16px;
+		}
+	}
+}
+
+//Artwork
+.artwork {
+	.card-body {
+		@include media-breakpoint-up(lg) {
+			border-bottom: 1px solid black;
+		}
+	}
+	.moreBtn {
+		width: 130px;
+		height: 35px;
+		padding: 8px 12px;
+		right: 0px;
+		bottom: 0px;
+		text-align: center;
+	}
+
+	&-header:hover &-overlay {
+		opacity: 1;
+	}
+
+	&-overlay {
+		transition: opacity 0.3s;
+		opacity: 0;
+
+		position: absolute;
+		inset: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+		margin: 1rem;
+		padding: 1rem;
+	}
+
+	&-content {
+		border: 1px solid #fff;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		button {
+			align-self: end;
+		}
+	}
+}

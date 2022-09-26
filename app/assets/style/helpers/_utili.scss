@@ -1,0 +1,18 @@
+.ff-squada {
+  font-family: "squada One";
+  font-size: 16px;
+  color: black;
+}
+
+.col-lg-none {
+  display: block;
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+.border-top-md {
+  @include media-breakpoint-up(lg) {
+    border-top: 1px solid black;
+  }
+}

@@ -1,0 +1,202 @@
+// 黑框btn
+.moreBtn {
+  padding: 8px 42px;
+  font-size: $h5-font-size; //18px
+  font-family: "squada One";
+  width: 140px;
+  position: relative;
+  border: 1px solid black;
+  &:after {
+    // 橘色三角形
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    border-left: 16px transparent solid;
+    border-bottom: 16px #e6553b solid;
+  }
+  &:hover {
+    &:after {
+      border-bottom: 16px black solid;
+      transition: all 0.3s;
+    }
+  }
+}
+
+//白底 hover後橘底
+.btn-white {
+  background-color: white;
+
+  &:hover {
+    background-color: #e6553b;
+    color: white;
+    transition: all 0.3s;
+  }
+}
+
+// 無框btn hover後 黑框橘底
+.moreBtn-border {
+  padding: 8px 42px;
+  font-size: $h5-font-size; //18px
+  font-family: "squada One";
+  width: 140px;
+  position: relative;
+  border: 1px solid transparent;
+  &:after {
+    // 橘色三角形
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    border-left: 16px transparent solid;
+    border-bottom: 16px #e6553b solid;
+  }
+  &:hover {
+    background-color: #e6553b;
+    color: white;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    transition: all 0.3s;
+    &:after {
+      border-bottom: 16px black solid;
+    }
+  }
+}
+
+//桌機 hover遮罩+moreBtn+橘色三角形
+// .img-hover {
+//   // padding: 8px 42px;
+//   // font-size: $h5-font-size; //18px
+//   // font-family: "squada One";
+//   // width: 140px;
+//   // position: relative;
+//   // border: 1px solid black;
+//   // position: absolute;
+//   // background-color: white;
+//   // &:after {
+//   //   // 橘色三角形
+//   //   content: "";
+//   //   position: absolute;
+//   //   right: 0;
+//   //   bottom: 0px;
+//   //   border-left: 16px transparent solid;
+//   //   border-bottom: 16px #e6553b solid;
+//   // }
+//   &:hover {
+//     background-color: #e6553b;
+//     color: white;
+//     &:after {
+//       // 橘色三角形
+//       border-left: 16px transparent solid;
+//       border-bottom: 16px black solid;
+//     }
+//   }
+// }
+
+// 手機 hover遮罩
+// 橘色三角形
+.triangle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  /*  三角  */
+  width: 0px;
+  height: 0px;
+  border-right: 10px solid #e6553b;
+  border-top: 10px solid transparent;
+  display: none;
+}
+// 手機版遮罩
+.img-hover {
+  position: relative;
+  background-color: #000;
+
+  &:hover {
+    // more顯示
+    transition: all 0.3s;
+    &::after {
+      content: "MORE";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #000;
+      opacity: 0.5;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .triangle {
+      display: block;
+      z-index: 1;
+    }
+  }
+}
+
+// 桌機版 ranking遮罩+ btn
+.img-hover-md {
+  position: relative;
+  background-color: #000;
+  &:hover {
+    transition: all 0.3s;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #000;
+      opacity: 0.5;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .moreBtn {
+      display: block;
+      z-index: 1;
+    }
+  }
+}
+
+//artwork 遮罩
+.img-hover-artwork {
+  position: relative;
+
+  &:hover {
+    &::after {
+      // 遮罩為元素
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      background-color: #000;
+      opacity: 0.5;
+      padding: 16px;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid white;
+    }
+
+    .text-hover {
+      font-size: 12px;
+      color: #fff;
+      display: block;
+      z-index: 3;
+    }
+    .moreBtn {
+      color: black;
+      display: block;
+      z-index: 1;
+    }
+  }
+}
